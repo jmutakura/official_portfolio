@@ -1,0 +1,37 @@
+* {
+}
+
+html {
+	overflow: hidden;
+}
+
+body {
+	background: #2c2d44;
+	background-image: -moz-linear-gradient(45deg, #3f3251 2%, #002025 100%);
+	background-image: -webkit-linear-gradient(45deg, #3f3251 2%, #002025 100%);
+	background-image: linear-gradient(45deg, #3f3251 2%, #002025 100%);
+}
+
+.preloader {
+	display: block;
+}
+
+.main-content {
+	opacity: 0; /*changed in js*/
+	display: none; /*changed in js*/
+	transition: opacity 2s ease-in;
+}
+
+.main-content h1 {
+	color: #ffffff;
+}
+
+.main-content .intro {
+	width: 100vw;
+	height: 100vh;
+}
+
+.main-content .about {
+	width: 100vw;
+	height: 100vh;
+}
