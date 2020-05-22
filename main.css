@@ -1,12 +1,11 @@
-* {
-}
-
 html {
 	overflow: hidden;
 }
 
 body {
-	background: #2c2d44;
+	font-family: Calibre, San Francisco, SF Pro Text, -apple-system, system-ui,
+		BlinkMacSystemFont, Roboto, Helvetica Neue, Segoe UI, Arial, sans-serif;
+	background-color: rgb(15, 27, 47);
 	background-image: -moz-linear-gradient(45deg, #3f3251 2%, #002025 100%);
 	background-image: -webkit-linear-gradient(45deg, #3f3251 2%, #002025 100%);
 	background-image: linear-gradient(45deg, #3f3251 2%, #002025 100%);
@@ -17,13 +16,19 @@ body {
 }
 
 .main-content {
+	background-color: rgb(15, 27, 47);
+	color: rgb(136, 146, 176);
 	opacity: 0; /*changed in js*/
 	display: none; /*changed in js*/
 	transition: opacity 2s ease-in;
+	padding: 1rem 7rem;
+}
+
+.main-content .navbar {
+	justify-content: space-between;
 }
 
 .main-content h1 {
-	color: #ffffff;
 }
 
 .main-content .intro {
@@ -31,7 +36,44 @@ body {
 	height: 100vh;
 }
 
+.main-content .intro h7 {
+	color: #28a745;
+}
+
+.main-content .intro h1 {
+	font-size: 80px;
+	color: rgb(204, 214, 246);
+}
+
+.main-content .intro h2 {
+	font-size: 80px;
+}
+
+.main-content .intro .intro-paragraph {
+	width: 40vw;
+	padding-top: 3rem;
+}
+
+.main-content .intro .get-intouch {
+	margin-top: 4rem;
+}
+
 .main-content .about {
 	width: 100vw;
 	height: 100vh;
+}
+
+/* Main content */
+
+.main-content .navbar {
+	color: rgb(136, 146, 176);
+	background-color: rgb(15, 27, 47);
+}
+
+.main-content .navbar .navbar-text .collapse a {
+	color: rgb(136, 146, 176);
+}
+
+section {
+	padding: 7rem 0;
 }
