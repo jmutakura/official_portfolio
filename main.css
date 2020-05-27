@@ -21,7 +21,7 @@ body {
 	opacity: 0; /*changed in js*/
 	display: none; /*changed in js*/
 	transition: opacity 2s ease-in;
-	padding: 1rem 7rem;
+	padding: 1rem 10rem;
 }
 
 .main-content .navbar {
@@ -41,12 +41,12 @@ body {
 }
 
 .main-content .intro h1 {
-	font-size: 80px;
+	font-size: 5rem;
 	color: rgb(204, 214, 246);
 }
 
 .main-content .intro h2 {
-	font-size: 80px;
+	font-size: 5rem;
 }
 
 .main-content .intro .intro-paragraph {
@@ -68,6 +68,7 @@ body {
 .main-content .navbar {
 	color: rgb(136, 146, 176);
 	background-color: rgb(15, 27, 47);
+	width: 85vw;
 }
 
 .main-content .navbar .navbar-text .collapse a {
@@ -76,4 +77,17 @@ body {
 
 section {
 	padding: 7rem 0;
+}
+
+section h2 {
+	color: rgb(204, 214, 246);
+}
+
+section .d-flex {
+	margin-right: 7rem;
+	padding: 3rem;
+}
+
+section .d-flex .about-image {
+	align-content: center;
 }
