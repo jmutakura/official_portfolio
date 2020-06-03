@@ -88,6 +88,38 @@ section .d-flex {
 	padding: 3rem;
 }
 
+section .d-flex .about-content .intro-p1 {
+	padding-top: 30px;
+}
+
+section .d-flex .about-content .tech-list {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(140px, 200px));
+	overflow: hidden;
+	padding: 0px;
+	margin: 25px 0px 0px;
+	list-style: outside none none;
+}
+
+section .d-flex .about-content .tech-list li {
+	position: relative;
+	margin-bottom: 10px;
+	padding-left: 20px;
+	font-family: SF Mono, Fira Code, Fira Mono, Roboto Mono, Lucida Console,
+		Monaco, monospace;
+	font-size: 13px;
+	color: rgb(136, 146, 176);
+}
+
+section .d-flex .about-content .tech-list li::before {
+	content: '▹';
+	position: absolute;
+	left: 0px;
+	color: #28a745;
+	font-size: 14px;
+	line-height: 12px;
+}
+
 section .d-flex .about-image {
 	align-content: center;
 }
