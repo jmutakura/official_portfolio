@@ -123,3 +123,35 @@ section .d-flex .about-content .tech-list li::before {
 section .d-flex .about-image {
 	align-content: center;
 }
+
+/* work section */
+
+.work .container a {
+	display: inline-block;
+	text-decoration: none;
+	text-decoration-skip-ink: auto;
+	position: relative;
+	transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+	cursor: pointer;
+	color: rgb(100, 255, 218);
+}
+
+.work .container .work-details {
+	padding: 0px;
+	margin: 0px;
+	list-style: outside none none;
+	font-size: 18px;
+}
+
+.work .container li::before {
+	content: '▹';
+	position: absolute;
+	left: 0px;
+	color: #28a745;
+}
+
+.work .container li {
+	position: relative;
+	padding-left: 30px;
+	margin-bottom: 10px;
+}
