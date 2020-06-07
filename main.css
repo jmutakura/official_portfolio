@@ -87,6 +87,17 @@ section .d-flex {
 	margin-right: 7rem;
 	padding: 3rem;
 }
+section .d-flex .about-content .row .col h2::before {
+	content: '01.';
+	margin-right: 10px;
+	font-family: SF Mono, Fira Code, Fira Mono, Roboto Mono, Lucida Console,
+		Monaco, monospace;
+	font-weight: normal;
+	color: #28a745;
+	font-size: 20px;
+	position: relative;
+	bottom: 4px;
+}
 
 section .d-flex .about-content .intro-p1 {
 	padding-top: 30px;
@@ -133,7 +144,19 @@ section .d-flex .about-image {
 	position: relative;
 	transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 	cursor: pointer;
-	color: rgb(100, 255, 218);
+	color: #28a745;
+}
+
+.work h2::before {
+	content: '02.';
+	margin-right: 10px;
+	font-family: SF Mono, Fira Code, Fira Mono, Roboto Mono, Lucida Console,
+		Monaco, monospace;
+	font-weight: normal;
+	color: #28a745;
+	font-size: 20px;
+	position: relative;
+	bottom: 4px;
 }
 
 .work .container .work-details {
