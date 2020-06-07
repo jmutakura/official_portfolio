@@ -178,3 +178,28 @@ section .d-flex .about-image {
 	padding-left: 30px;
 	margin-bottom: 10px;
 }
+
+/* Projects section */
+
+.projects h2::before {
+	content: '03.';
+	margin-right: 10px;
+	font-family: SF Mono, Fira Code, Fira Mono, Roboto Mono, Lucida Console,
+		Monaco, monospace;
+	font-weight: normal;
+	color: #28a745;
+	font-size: 20px;
+	position: relative;
+	bottom: 4px;
+}
+
+.projects h2 {
+	text-align: center;
+	padding-bottom: 50px;
+}
+
+.projects .projects-list {
+	display: grid;
+}
+
+.projects;
