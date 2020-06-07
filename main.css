@@ -202,4 +202,12 @@ section .d-flex .about-image {
 	display: grid;
 }
 
-.projects;
+.projects .project-list .row .col-sm-4 .card {
+	height: 350px;
+	background-color: rgb(23, 42, 69);
+}
+
+.projects .project-list .row .col-sm-4 .card .card-body .card-icons {
+	display: flex;
+	justify-content: space-between;
+}
