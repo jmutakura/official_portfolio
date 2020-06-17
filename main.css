@@ -211,3 +211,32 @@ section .d-flex .about-image {
 	display: flex;
 	justify-content: space-between;
 }
+
+/* Get in Touch Section */
+.contact h2::before {
+	content: '04.';
+	margin-right: 10px;
+	font-family: SF Mono, Fira Code, Fira Mono, Roboto Mono, Lucida Console,
+		Monaco, monospace;
+	font-weight: normal;
+	color: #28a745;
+	font-size: 20px;
+	position: relative;
+	bottom: 4px;
+}
+
+.contact h2 {
+	text-align: center;
+	padding-bottom: 50px;
+}
+
+.contact .content {
+	padding: 10px 300px;
+	display: grid;
+	justify-content: center;
+}
+
+.contact .content h5 {
+	text-align: center;
+	margin-bottom: 60px;
+}
