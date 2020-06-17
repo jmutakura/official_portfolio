@@ -260,3 +260,45 @@ footer {
 	line-height: 1;
 	margin-bottom: 10px;
 }
+
+@media only screen and (max-width: 600px) {
+	.main-content {
+		padding: 15px;
+	}
+
+	.main-content .intro h1 {
+		font-size: 40px;
+	}
+
+	.main-content .intro h2 {
+		font-size: 40px;
+		color: rgb(136, 146, 176);
+	}
+
+	.main-content .intro .intro-paragraph {
+		width: 94%;
+		padding-bottom: 80px;
+	}
+
+	.main-content .intro .intro-paragraph p {
+		padding: 15px;
+	}
+
+	.btn-outline-success {
+		color: #28a745;
+		border-color: #28a745;
+		width: 250px;
+		height: 70px;
+	}
+
+	/* About Section */
+	section .d-flex .about-image {
+		display: none;
+	}
+	section .d-flex {
+		margin-right: 0;
+	}
+	section .d-flex hr {
+		display: none;
+	}
+}
