@@ -28,6 +28,17 @@ body {
 	justify-content: space-between;
 }
 
+.main-content .navbar .navbar-text .collapse .navbar-nav a::before {
+	content: '♦   ';
+	text-align: right;
+	color: #28a745;
+	font-size: 12px;
+}
+
+.main-content .navbar .navbar-text .collapse .navbar-nav a:hover {
+	color: #28a745;
+}
+
 .main-content h1 {
 }
 
@@ -239,4 +250,13 @@ section .d-flex .about-image {
 .contact .content h5 {
 	text-align: center;
 	margin-bottom: 60px;
+}
+
+footer {
+	text-align: center;
+	font-family: SF Mono, Fira Code, Fira Mono, Roboto Mono, Lucida Console,
+		Monaco, monospace;
+	font-size: 12px;
+	line-height: 1;
+	margin-bottom: 10px;
 }
