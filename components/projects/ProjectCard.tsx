@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { kebabCase } from '@/utils/utils';
 import Link from 'next/link';
+import { RxExternalLink, RxGithubLogo } from 'react-icons/rx';
 
 function ProjectCard({ project }) {
 	return (
@@ -21,25 +22,15 @@ function ProjectCard({ project }) {
 					<a href={project.link || project.github} target='_blank'>
 						<h3 className='text-lg font-bold'>{project.title}</h3>
 					</a>
-					<div className='space-x-2'>
+					<div className='space-x-2 flex'>
 						{project.link && (
 							<a href={project.link} target='_blank' rel='noreferrer'>
-								<Image
-									src='/static/icons/external-link.svg'
-									width={16}
-									height={16}
-									alt='Link Icon'
-								/>
+								<RxExternalLink className='text-fun-pink' />
 							</a>
 						)}
 						{project.github && (
 							<a href={project.github} target='_blank' rel='noreferrer'>
-								<Image
-									src='/static/icons/github.svg'
-									width={16}
-									height={16}
-									alt='Github Icon'
-								/>
+								<RxGithubLogo className='text-fun-pink' />
 							</a>
 						)}
 					</div>

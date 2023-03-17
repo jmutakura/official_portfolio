@@ -2,6 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import { footer } from '@/data/global';
 import Image from 'next/image';
+import { RxGithubLogo } from 'react-icons/rx';
 
 function Footer() {
 	return (
@@ -92,12 +93,7 @@ function Footer() {
 					target='_blank'
 					rel='nooreferrer'
 				>
-					<Image
-						src='/static/icons/github.svg'
-						width={16}
-						height={16}
-						alt='Github Icon'
-					/>
+					<RxGithubLogo className='text-fun-pink' size={15} />
 					<span className='ml-2'>View Source Code </span>
 				</a>
 			</div>
