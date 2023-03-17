@@ -1,8 +1,12 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
-}
-
-module.exports = nextConfig
+module.exports = {
+    swcMinify: true,
+    async redirects() {
+        return [
+          {
+            source: '/blog',
+            destination: '/',
+            permanent: true,
+          },
+        ]
+      },
+};
