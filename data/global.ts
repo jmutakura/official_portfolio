@@ -46,7 +46,7 @@ export const footer: Footer = {
 				},
 				{
 					name: 'About',
-					link: '/about',
+					link: '/',
 					leavesWebsite: false,
 				},
 				{
