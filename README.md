@@ -1,2 +1,3 @@
-# official_portfolio
-[Website](https://jmutakura.com)
+# **[jmutakura.com](https://jmutakura.com)**
+
+Portfolio built using **React, NextJS, and TailwindCSS**!
