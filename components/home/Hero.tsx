@@ -1,7 +1,15 @@
-import React from 'react';
-import { Link as ScrollLink } from 'react-scroll';
+'use client';
 
 function Hero() {
+	const scrollToSection = (id: string) => {
+		const element = document.getElementById(id);
+		if (element) {
+			const offset = 30;
+			const elementPosition = element.getBoundingClientRect().top;
+			const offsetPosition = elementPosition + window.pageYOffset - offset;
+			window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+		}
+	};
 	return (
 		<>
 			<div
@@ -58,18 +66,12 @@ function Hero() {
 						src='/static/doodles/hero/code.svg'
 					/>
 				</h1>
-				<ScrollLink
-					activeClass='active'
-					to='learnmore'
-					spy={true}
-					offset={-30}
-					smooth={true}
-					duration={500}
+				<button
+					onClick={() => scrollToSection('learnmore')}
+					className='cursor-pointer font-bold whitespace-nowrap px-10 py-4 text-fun-white border-2 text-xl rounded-full border-fun-white bg-bg hover:bg-fun-pink hover:text-white hover:border-fun-pink transition-colors'
 				>
-					<div className='cursor-pointer font-bold whitespace-nowrap px-10 py-4 text-fun-white border-2 text-xl rounded-full border-fun-white bg-bg hover:bg-fun-pink hover:text-white hover:border-fun-pink transition-colors'>
-						Tell me more
-					</div>
-				</ScrollLink>
+					Tell me more
+				</button>
 			</div>
 		</>
 	);
