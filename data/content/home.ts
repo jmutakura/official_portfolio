@@ -1,81 +1,149 @@
+import { IconType } from 'react-icons';
+import {
+	SiAmazonwebservices,
+	SiGooglecloud,
+	SiTypescript,
+	SiTailwindcss,
+	SiReact,
+	SiVuedotjs,
+	SiNextdotjs,
+	SiPython,
+	SiNodedotjs,
+	SiGit,
+	SiPostgresql,
+	SiMysql,
+	SiMongodb,
+	SiGo,
+	SiDigitalocean,
+	SiExpo,
+	SiSvelte,
+	SiAndroid,
+	SiCplusplus,
+	SiPhp,
+} from 'react-icons/si';
+import { FaJava } from 'react-icons/fa';
+
 type Skill = {
 	title: string;
-	icon: string;
-	style?: object;
+	icon: IconType;
+	color?: string;
 };
 
-export const skills: Skill[] = [
+type SkillCategory = {
+	category: string;
+	skills: Skill[];
+};
+
+export const skillCategories: SkillCategory[] = [
 	{
-		title: 'AWS',
-		icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg',
+		category: 'Cloud',
+		skills: [
+			{
+				title: 'AWS',
+				icon: SiAmazonwebservices,
+				color: '#FF9900',
+			},
+			{
+				title: 'Google Cloud',
+				icon: SiGooglecloud,
+				color: '#4285F4',
+			},
+			{
+				title: 'Digital Ocean',
+				icon: SiDigitalocean,
+				color: '#4285F4',
+			},
+		],
 	},
 	{
-		title: 'Google Cloud',
-		icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg',
+		category: 'Frontend',
+		skills: [
+			{
+				title: 'Expo',
+				icon: SiExpo,
+				color: '#dce2e7ff',
+			},
+			{
+				title: 'React',
+				icon: SiReact,
+				color: '#61DAFB',
+			},
+			{
+				title: 'Android',
+				icon: SiAndroid,
+				color: '#329b48ff',
+			},
+			{
+				title: 'Next.js',
+				icon: SiNextdotjs,
+				color: '#FFFFFF',
+			},
+			{
+				title: 'Vue',
+				icon: SiVuedotjs,
+				color: '#4FC08D',
+			},
+			{
+				title: 'Svelte',
+				icon: SiSvelte,
+				color: '#f96743',
+			},
+		],
 	},
 	{
-		title: 'HTML',
-		icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
+		category: 'Backend',
+		skills: [
+			{
+				title: 'Node.js',
+				icon: SiNodedotjs,
+				color: '#339933',
+			},
+			{
+				title: 'Python',
+				icon: SiPython,
+				color: '#3776AB',
+			},
+			{
+				title: 'Java',
+				icon: FaJava,
+				color: '#961600ff',
+			},
+			{
+				title: 'Go',
+				icon: SiGo,
+				color: '#00ADD8',
+			},
+			{
+				title: 'PHP',
+				icon: SiPhp,
+				color: '#8893BE',
+			},
+			{
+				title: 'C/C++',
+				icon: SiCplusplus,
+				color: '#00ADD8',
+			},
+			
+		],
 	},
 	{
-		title: 'CSS',
-		icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
-	},
-	{
-		title: 'Javascript',
-		icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
-	},
-	{
-		title: 'Typescript',
-		icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
-	},
-	{
-		title: 'TailwindCSS',
-		icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg',
-	},
-	{
-		title: 'React',
-		icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
-	},
-	{
-		title: 'Vue',
-		icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg',
-	},
-	{
-		title: 'NextJS',
-		icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg',
-		style: { filter: 'invert(1)' },
-	},
-	{
-		title: 'Python',
-		icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
-	},
-	{
-		title: 'NodeJS',
-		icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
-	},
-	{
-		title: 'Git',
-		icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
-	},
-	{
-		title: 'Postgres',
-		icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
-	},
-	{
-		title: 'MySQL',
-		icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
-	},
-	{
-		title: 'Java',
-		icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',
-	},
-	{
-		title: 'MongoDB',
-		icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
-	},
-	{
-		title: 'Go',
-		icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg',
+		category: 'Database',
+		skills: [
+			{
+				title: 'PostgreSQL',
+				icon: SiPostgresql,
+				color: '#4169E1',
+			},
+			{
+				title: 'MySQL',
+				icon: SiMysql,
+				color: '#f29111',
+			},
+			{
+				title: 'MongoDB',
+				icon: SiMongodb,
+				color: '#47A248',
+			},
+		],
 	},
 ];

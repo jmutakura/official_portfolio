@@ -6,18 +6,18 @@ import Skills from '@/components/home/Skills';
 import About from '@/components/home/About';
 
 export const metadata = {
-    title: 'Jonathan Mutakura - Web Developer',
-    description: "I'm a passionate web developer coding amazing websites and apps.",
+    title: 'Jonathan Mutakura - Software Developer / Engineer',
+    description: "I'm a passionate software developer building amazing websites and apps.",
 };
 
 export default function Home() {
     return (
-        <Page currentPage="Home" meta={{ desc: "I'm a passionate web developer coding amazing websites and apps." }}>
+        <Page currentPage="Home" meta={{ desc: "I'm a passionate software developer building amazing websites and apps." }}>
             <Hero />
             <div className="mt-20 space-y-32">
                 <About />
-                <Projects />
                 <Skills />
+                <Projects />
             </div>
             <CTA />
         </Page>
