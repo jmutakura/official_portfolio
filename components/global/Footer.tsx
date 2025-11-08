@@ -1,8 +1,7 @@
 import Link from 'next/link';
-import React from 'react';
 import { footer } from '@/data/global';
-import Image from 'next/image';
 import { RxGithubLogo } from 'react-icons/rx';
+import { SiReact, SiNextdotjs, SiTailwindcss } from 'react-icons/si';
 
 function Footer() {
 	return (
@@ -43,29 +42,12 @@ function Footer() {
 					<div className='inline-flex items-center uppercase text-xs font-bold tracking-widest'>
 						Made with{' '}
 						<div className='space-x-2 inline-flex items-center -mt-1 ml-3'>
-							<span>
-								<img
-									src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'
-									width='26'
-									title='React'
-								/>
-								<span className='sr-only'>React</span>
-							</span>
-							<span>
-								<img
-									src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg'
-									width='40'
-									className='invert'
-									title='NextJS'
-								/>
+							<span title='NextJS'>
+								<SiNextdotjs className='' size={26} />
 								<span className='sr-only'>NextJS</span>
 							</span>
-							<span>
-								<img
-									src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg'
-									width='26'
-									title='TailwindCSS'
-								/>
+							<span title='TailwindCSS'>
+								<SiTailwindcss className='text-[#06B6D4]' size={26} />
 								<span className='sr-only'>TailwindCSS</span>
 							</span>
 						</div>

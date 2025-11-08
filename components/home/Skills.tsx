@@ -1,46 +1,61 @@
-import React from "react";
-import { skills } from "@/data/content/home";
+import { skillCategories } from "@/data/content/home";
 
 function Skills() {
   return (
-    <div className="flex flex-col md:flex-row justify-between relative">
-      <h2 className="relative text-3xl w-full text-center md:text-left font-bold md:max-w-lg mb-10 md:mr-10 md:mb-0 md:w-max mr-0 ">
-        I got the experience.
-        <br />
-        Here is my toolbelt for success.
-        <img
-          className="sqD bottom-[-80px] left-[-50px] lg:bottom-[-50px] lg:left-[-35px] z-[-10]"
-          src="/static/doodles/skills/laptop.svg"
-        />
-        <img
-          className="sqD hidden md:block top-[140px] right-0 lg:top-[105px]"
-          src="/static/doodles/skills/coding.svg"
-        />
-        <img
-          className="sqD hidden md:block top-[200px] right-[50px] lg:top-[170px] lg:right-[50px]"
-          src="/static/doodles/skills/youtube.svg"
-        />
-        <img
-          className="sqD top-[-15px] right-[-15px]"
-          src="/static/doodles/skills/fillStar.svg"
-        />
-      </h2>
-      <div className="relative max-w-lg w-full mx-auto md:mx-none grid gap-x-8 gap-y-12 sm:gap-8 md:gap-12 grid-cols-3 sm:grid-cols-6 items-center place-content-center">
-        {skills.map((item, index) => {
-          return (
-            <div
-              title={item.title}
-              key={index}
-              className="w-10 mx-auto flex items-center flex-col justify-center"
-            >
-              <img src={item.icon} style={item.style} />
-              <p className="text-xs text-fun-gray font-bold mt-3 opacity-80">
-                {item.title}
-              </p>
-            </div>
-          );
-        })}
+    <div className="relative">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold mb-3 relative inline-block">
+          My Tech Stack
+          <img
+            className="sqD top-[-15px] right-[-25px]"
+            src="/static/doodles/skills/fillStar.svg"
+          />
+        </h2>
+        <p className="text-fun-gray text-lg">
+          Tools and technologies I use to bring ideas to life
+        </p>
       </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        {skillCategories.map((category, categoryIndex) => (
+          <div
+            key={categoryIndex}
+            className="bg-bg border border-fun-pink-darker rounded-lg p-6 hover:border-fun-pink transition-colors"
+          >
+            <h3 className="text-fun-pink font-bold text-sm uppercase tracking-wider mb-4 text-center">
+              {category.category}
+            </h3>
+            <div className="flex flex-wrap justify-center gap-4">
+              {category.skills.map((skill, skillIndex) => {
+                const Icon = skill.icon;
+                return (
+                  <div
+                    key={skillIndex}
+                    title={skill.title}
+                    className="flex flex-col items-center group"
+                  >
+                    <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-fun-pink-darkest/30 group-hover:bg-fun-pink-darkest/50 transition-colors">
+                      <Icon size={28} style={{ color: skill.color }} />
+                    </div>
+                    <p className="text-xs text-fun-gray font-medium mt-2 opacity-80 group-hover:opacity-100 transition-opacity">
+                      {skill.title}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <img
+        className="sqD hidden md:block bottom-[-60px] left-[-50px] lg:left-[50px]"
+        src="/static/doodles/skills/laptop.svg"
+      />
+      <img
+        className="sqD hidden lg:block top-[100px] right-[-30px]"
+        src="/static/doodles/skills/coding.svg"
+      />
     </div>
   );
 }

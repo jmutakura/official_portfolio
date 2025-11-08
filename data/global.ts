@@ -70,13 +70,7 @@ export const footer: Footer = {
 					link: 'https://www.linkedin.com/in/jonathan-mutakura-477023172/',
 					icon: '/static/icons/linkedin-f.svg',
 					leavesWebsite: true,
-				},
-				{
-					name: 'Email',
-					link: 'mailto:jmutakura@gmail.com',
-					icon: '/static/icons/mail-f.svg',
-					leavesWebsite: true,
-				},
+				}
 			],
 		},
 	],

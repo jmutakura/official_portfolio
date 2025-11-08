@@ -1,9 +1,18 @@
+'use client';
+
 import Link from 'next/link';
-import React from 'react';
 import { routes } from '@/data/global';
-import { Link as ScrollLink } from 'react-scroll';
 
 function Navbar({ currentPage }) {
+	const scrollToSection = (id: string) => {
+		const element = document.getElementById(id);
+		if (element) {
+			const offset = 30;
+			const elementPosition = element.getBoundingClientRect().top;
+			const offsetPosition = elementPosition + window.pageYOffset - offset;
+			window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+		}
+	};
 	return (
 		<nav className='flex items-center justify-between'>
 			<li className='list-none font-bold text-lg cursor-pointer'>
@@ -27,26 +36,20 @@ function Navbar({ currentPage }) {
 					return (
 						<li
 							key={index}
-							className={`list-none text-white ${
-								currentPage === item.title
-									? 'opacity-100'
-									: 'opacity-40 hover:opacity-100 transition-opacity'
-							}`}
+							className={`list-none text-white ${currentPage === item.title
+								? 'opacity-100'
+								: 'opacity-40 hover:opacity-100 transition-opacity'
+								}`}
 						>
 							{item.path ? (
 								<Link href={item.path}>{item.title}</Link>
 							) : (
-								<ScrollLink
+								<button
+									onClick={() => scrollToSection(item.scroll)}
 									className='cursor-pointer'
-									activeClass='active'
-									to={item.scroll}
-									spy={true}
-									offset={-30}
-									smooth={true}
-									duration={500}
 								>
 									{item.title}
-								</ScrollLink>
+								</button>
 							)}
 						</li>
 					);

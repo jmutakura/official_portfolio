@@ -1,9 +1,12 @@
-import Link from 'next/link';
+'use client';
+
 import React from 'react';
 import SectionTitle from '../global/SectionTitle';
 import work from '@/data/content/work';
-
 import TimelineCard from '../about/TimelineCard';
+import ExperienceBadge from '../about/ExperienceBadge';
+import { VerticalTimeline } from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
 
 function About() {
 	return (
@@ -23,28 +26,30 @@ function About() {
 				</p>
 			</div>
 
-			<div className='max-w-2xl mx-auto'>
-				<h1 className='mb-4 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-5xl dark:text-white'>
-					Work Experience
-				</h1>
-				<ol className='relative border-l border-gray-200 dark:border-gray-700'>
-					{work.map((item) => {
-						return <TimelineCard key={item.title} work={item} />;
-					})}
-				</ol>
+			<div className='w-full'>
+				<div className='flex flex-col items-center mb-10'>
+					<h2 className='text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400 bg-clip-text text-transparent mb-4'>
+						Work Experience
+					</h2>
+					<ExperienceBadge />
+				</div>
 
-				<p className='mt-5'>
-					This timeline provides information about my prior work experience and
-					internships throughout the years that I have worked in the indestry.
-					More info can be found on my :{' '}
+				<VerticalTimeline lineColor='rgba(139, 92, 246, 0.3)'>
+					{work.map((item, index) => {
+						return <TimelineCard key={`${item.company}-${index}`} work={item} />;
+					})}
+				</VerticalTimeline>
+
+				<p className='mt-10 text-center text-sm text-gray-500 dark:text-gray-400'>
+					View my full professional profile on{' '}
 					<a
-						className='text-blue-600 hover:underline'
+						className='text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 font-medium transition-colors'
 						href='https://www.linkedin.com/in/jonathan-mutakura-477023172/'
 						target='_blank'
+						rel='noopener noreferrer'
 					>
-						Linkedin Profile
+						LinkedIn
 					</a>
-					.
 				</p>
 			</div>
 		</div>
