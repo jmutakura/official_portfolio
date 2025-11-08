@@ -2,8 +2,6 @@ import { IconType } from 'react-icons';
 import {
 	SiAmazonwebservices,
 	SiGooglecloud,
-	SiTypescript,
-	SiTailwindcss,
 	SiReact,
 	SiVuedotjs,
 	SiNextdotjs,

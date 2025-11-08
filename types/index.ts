@@ -12,5 +12,8 @@ export type Work = {
 	startDate: string;
 	endDate: string;
 	title: string;
+	company: string;
+	location?: string;
 	desc: string;
+	technologies?: string[];
 };
