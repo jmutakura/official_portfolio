@@ -4,12 +4,11 @@ import { Project } from 'types';
 const projects: Project[] = [
 	{
 		id: 0,
-		title: 'QuotesIO',
-		desc: 'Generate quotes from the brightest minds in history.',
-		img: '/static/projects/quotesio.png',
-		link: 'https://quotesio.jmutakura.com/',
-		github: 'https://github.com/jmutakura/quotesio',
-		tags: ['React', 'NextJS', 'TailwindCSS', 'CSS'],
+		title: 'Cresco Agritech Solutions Ltd.',
+		desc: 'Manage and monitor various conditions on your farm.',
+		img: '/static/projects/crescoag.png',
+		link: 'https://www.crescoag.ca/',
+		tags: ['Svelte', 'IOS', 'Android', 'IOT'],
 	},
 	{
 		id: 1,
