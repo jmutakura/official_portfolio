@@ -18,6 +18,10 @@ import {
 	SiAndroid,
 	SiCplusplus,
 	SiPhp,
+	SiLinux,
+	SiGitconnected,
+	SiJenkins,
+	SiFlutter
 } from 'react-icons/si';
 import { FaJava } from 'react-icons/fa';
 
@@ -34,7 +38,7 @@ type SkillCategory = {
 
 export const skillCategories: SkillCategory[] = [
 	{
-		category: 'Cloud',
+		category: 'Infrastructure',
 		skills: [
 			{
 				title: 'AWS',
@@ -46,10 +50,25 @@ export const skillCategories: SkillCategory[] = [
 				icon: SiGooglecloud,
 				color: '#4285F4',
 			},
+			// {
+			// 	title: 'Digital Ocean',
+			// 	icon: SiDigitalocean,
+			// 	color: '#4285F4',
+			// },
 			{
-				title: 'Digital Ocean',
-				icon: SiDigitalocean,
+				title: 'Linux',
+				icon: SiLinux,
+				color: '#ff9900ff',
+			},
+			{
+				title: 'Git',
+				icon: SiGit,
 				color: '#4285F4',
+			},
+			{
+				title: 'Jenkins',
+				icon: SiJenkins,
+				color: '#e0140dff',
 			},
 		],
 	},
@@ -77,9 +96,9 @@ export const skillCategories: SkillCategory[] = [
 				color: '#FFFFFF',
 			},
 			{
-				title: 'Vue',
-				icon: SiVuedotjs,
-				color: '#4FC08D',
+				title: 'Flutter',
+				icon: SiFlutter,
+				color: '#4966e9ff',
 			},
 			{
 				title: 'Svelte',
